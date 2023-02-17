@@ -22,4 +22,7 @@ spec:
       containers:
       - image: schoolofdevops/vote:v3
         name: vote
-        resources: {}
+        envFrom:
+          - configMapRef:
+              name: vote-options
+              optional: true
