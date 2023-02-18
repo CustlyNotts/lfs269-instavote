@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: worker
+    tier: middle
+  name: worker
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: worker
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: worker
+        tier: middle
+    spec:
+      containers:
+      - image: schoolofdevops/worker:latest
+        name: worker
+        resources: {}
