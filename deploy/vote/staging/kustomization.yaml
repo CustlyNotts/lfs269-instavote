@@ -10,7 +10,7 @@ namespace: instavote
 
 images:
 - name: schoolofdevops/vote
-  newTag: v7
+  newTag: v8
 
 commonAnnotations:
   supported-by: "sre@example.com"
